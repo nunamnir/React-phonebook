@@ -1,0 +1,256 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: Verdana, sans-serif;
+    /*font-size: 16px;*/
+    color: black;
+    margin: 5px 2px 5px 2px;
+}
+
+h1 {
+    margin: 10px 0 30px 0;
+    color: black;
+    text-shadow: 0px 0px 1px white;
+}
+
+#App {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    min-height: 100vh;
+    background-image: url("../src/img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 460px;
+    max-height: 460px;
+    width: 750px;
+    max-width: 750px;
+    pointer-events: none;
+}
+
+#modal-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 12;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128,128,128,0.7);
+    pointer-events: all;
+}
+
+#modal-form {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main-content {
+    position: absolute;
+    top: 5vh;
+    padding: 0;
+    overflow: hidden;
+    min-height: 90vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#phoneBookApp {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*align-self: flex-start;*/
+    flex-direction: row;
+    background-color: rgba(128,128,128,0.7);
+    height: 460px;
+    max-height: 460px;
+    /*min-height: 90vh;*/
+    width: 750px;
+    max-width: 750px;  
+    /*overflow: auto; */
+}
+
+.phonebook-wrap {
+    /*background-color: rgba(44,44,44,0.8);*/
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: column;
+    transition: all 0.3s ease-out;
+    margin: 10px 30px 10px 0px;
+}
+
+.addContactForm {
+    /*float: left;*/
+    /*margin-right: 30px;*/
+    align-self: flex-start;
+}
+
+.addContactForm input {
+    display: block;
+    margin: 0 0 15px 0;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+}
+
+.phoneBookList {
+    /*position: relative; */  
+    border-left: 5px solid #ff9933;
+    margin: 10px 0;
+    transition: all 0.3s ease-out;
+    height: 445;
+    max-height: 445px;
+    /*min-height: 442px;*/
+    width: 361px;
+    overflow: auto;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1.5px solid #ff9933;
+    border-radius: 4px;
+    padding: 17px;
+    margin: 4px 0px 4px 2px;
+    text-align: left;    
+    /*min-width: 300px;*/
+    max-width: 300px;
+    transition: all 0.1s ease-in;
+}
+
+/*.contact:hover {
+    background-color: rgba(255,255,255,0.9); 
+}*/
+
+.contact h2 {
+    margin: 2px 0 2px 0;
+    font-size: 22px;    
+    color: #000;
+    text-shadow: 1px 1px 3px gray;
+    text-transform: uppercase;
+}
+
+.contact p {
+    margin: 2px 0 2px 0;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+button {
+    margin: 0 3px;
+    padding: 10px 30px;
+    background: #f8a035;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-shadow: 1px 1px 3px gray;
+    transition: all 0.3s ease-in 0.1s;
+}
+
+button:hover {
+    background-color: #00cc00;
+}
+
+button.red {
+    margin: 0 3px;
+    padding: 10px 30px;
+    background: #f8a035;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-shadow: 1px 1px 3px gray;
+    transition: all 0.3s ease-in 0.1s;
+}
+
+button.red:hover {
+    background-color: #cc0000;
+}
+
+#modal-form {
+    border: 2px double black;
+}
+
+#modal-form h4 {
+    font-family: Tahoma, sans-serif;
+    margin: 4px 0 16px 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: darkgray;
+    text-shadow: 0px 0px 1px white;
+}
+
+#modal-form h2 {
+    font-family: Verdana, sans-serif;
+    margin: 4px 0 4px 0;
+    /*font-weight: bold;*/
+    font-size: 18px;
+    color: black;
+    text-shadow: 0px 0px 1px white;
+}
+
+#modal-form p {
+    font-family: Tahoma, sans-serif;
+    margin: 4px 0 4px 0;
+    /*font-weight: bold;*/
+    font-size: 16px;
+    color: black;
+    text-shadow: 0px 0px 1px white;
+}
+
+#modal-form input {
+    display: block;
+    margin: 0 0 15px 0;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+}
